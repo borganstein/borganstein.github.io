@@ -26,17 +26,19 @@ p {
     overflow: auto;
 } 
 
-.icons a {
+.icons button {
     float: left;
     width: 20%;
     text-align: center;
     padding: 12px 0;
     transition: all 0.3s ease;
-    color: white;
+    color:white;
+    background-color: hsla(0, 0%, 0%, 0.700);
+    border: none;
     font-size: 36px;  
 }
 
-.icons a:hover {
+.icons button:hover {
   background-color: rgba(85, 85, 85, 0.700);
 }
 
