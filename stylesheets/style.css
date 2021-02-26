@@ -32,7 +32,7 @@ p {
     overflow: auto;
 } 
 
-.icons button {
+.icons a {
     float: left;
     width: 20%;
     text-align: center;
@@ -44,7 +44,7 @@ p {
     font-size: 36px;  
 }
 
-.icons button:hover {
+.icons a:hover {
   background-color: rgba(85, 85, 85, 0.700);
 }
 
