@@ -1,0 +1,46 @@
+html, body {
+    height: 100vh;
+}
+body {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: url("../images/samuel-ferrara-unsplash_darker.jpg");
+      background-size: cover;
+   
+      color: white;
+      font-family: helvetica;
+}
+p {
+      font-size: 22px;
+}
+.content {
+    flex: 1 0 auto;
+}
+  .icons {
+    margin: 0;
+    width: 100%;
+    background-color: rgba(85, 85, 85, 0.700);
+    overflow: auto;
+} 
+
+.icons a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;  
+}
+
+.icons a:hover {
+  background-color: hsla(0, 0%, 0%, 0.500);
+}
+
+.footer {
+  flex-shrink: 0;
+  background: hsla(0, 0%, 0%, 0.500);
+  font-weight: bold;
+  padding: 20px;
+}
