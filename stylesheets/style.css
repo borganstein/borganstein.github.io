@@ -22,7 +22,7 @@ p {
 
 .icons {
     margin: 0;
-    background-color: rgba(85, 85, 85, 0.700);
+    background-color: hsla(0, 0%, 0%, 0.700);
     overflow: auto;
 } 
 
@@ -37,12 +37,12 @@ p {
 }
 
 .icons a:hover {
-  background-color: hsla(0, 0%, 0%, 0.500);
+  background-color: rgba(85, 85, 85, 0.700);
 }
 
 .footer {
   flex-shrink: 0;
-  background: hsla(0, 0%, 0%, 0.500);
+  background: hsla(0, 0%, 0%, 0.700);
   font-weight: bold;
   padding: 20px;
 }
