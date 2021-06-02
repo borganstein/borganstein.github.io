@@ -1,5 +1,47 @@
+/* ############################################################################
+#
+#
+#
+1. Common CSS
+2. Typography
+3. Layouts
+4. components
+5. Responsive Breakpoints
+#
+#
+#
+##############################################################################*/
+/* ############################################################################
+
+                              1. Common CSS
+
+##############################################################################*/
+/* ############################################################################
+
+                              2. Typography
+
+##############################################################################*/
+
+.intro h1 {
+  font-size: 3rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 22px;
+}
+/* ############################################################################
+
+                              3. Layouts
+
+##############################################################################*/
+
 * {
   font-size: 15px;
+      font-family: helvetica;
 }
 
 html, body {
@@ -12,41 +54,54 @@ body {
       margin: 0;
       padding: 0;
       text-align: center;
-      color: white;
-      font-family: helvetica;
-}
-
-p {
-      font-size: 22px;
 }
 
 .content {
     flex: 1 0 auto;
 }
 
-.intro {
+.hero {
+  display: grid;
+  place-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_mobile.jpg");
   background-size: cover;
   height: 500px;
   box-shadow: 0px 4px 10px rgba(0,0,0,1);
 }
 
-.portrait {
-  margin-top: 1rem;
-  border-radius: 50%;
-  border-color:  hsla(0, 0%, 0%, 0.700);
-  border-style: solid;
-  box-shadow: 0px 4px 10px rgba(0,0,0,1);
+.intro {
+  color: #4D576B;
+  padding-top: 1rem;
 }
-
-
 
 .icon-container {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     margin: 2rem 1rem;
-    padding: 3rem 3rem;
+}
+
+.footer {
+  flex-shrink: 0;
+  background: #4D576B;
+  font-weight: bold;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 4px 0px 10px rgba(0,0,0,1);
+  color: #fff;
+}
+
+/* ############################################################################
+
+                              4. Components
+
+##############################################################################*/
+
+.portrait {
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0px 4px 10px rgba(0,0,0,1);
+  filter: grayscale(50%);
 }
 
 .icon {
@@ -69,25 +124,29 @@ p {
   box-shadow: 0px 4px 10px rgba(0,0,0,1);
 }
 
-.footer {
-  flex-shrink: 0;
-  background: hsla(0, 0%, 0%, 0.700);
-  font-weight: bold;
-  padding: 20px;
-  width: 100%;
-  box-shadow: 4px 0px 10px rgba(0,0,0,1);
-}
+/* ############################################################################
+
+                      5. CSS Responsive Page Points
+
+############################################################################# */
+
 
 @media screen and (min-width: 750px) {
-  .intro {
+  .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_2k.jpg");
-
   }
+  .icon-container {
+      padding: 3rem 0rem;
+    }
 }
 
 @media screen and (min-width: 1100px) {
-  .intro {
+  .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_2k.jpg");
-
   }
+  .icon-container {
+      padding: 3rem 9rem;
+    }
 }
+
+/* ########################################################################## */
