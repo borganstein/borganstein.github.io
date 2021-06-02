@@ -1,54 +1,67 @@
+* {
+  font-size: 15px;
+}
+
 html, body {
     height: 100%;
 }
+
 body {
       display: flex;
       flex-direction: column;
       margin: 0;
+      padding: 0;
       text-align: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_darker.jpg");
-      background-size: cover;
       color: white;
       font-family: helvetica;
 }
+
 p {
       font-size: 22px;
 }
 
+.content {
+    flex: 1 0 auto;
+}
+
+.intro {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_mobile.jpg");
+  background-size: cover;
+  height: 500px;
+}
+
 .portrait {
+  margin-top: 1rem;
   border-radius: 50%;
   border-color:  hsla(0, 0%, 0%, 0.700);
   border-style: solid;
 }
 
-.content {
-    margin-top: 20px;
-    flex: 1 0 auto;
-}
+
 
 .icon-container {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     margin: 2rem 1rem;
+    padding: 3rem 3rem;
 }
 
 .icon {
-    float: left;
     width: 100%;
     text-align: center;
     padding: 2rem 0;
     transition: all 0.5s ease-in-out;
     color:white;
-    background-color: hsla(0, 0%, 0%, 0.700);
+    background-color: #4D576B;
     border: none;
     font-size: 2.5rem;
 
 }
 
 .icon:hover {
-  color: #000;
-  background-color: rgba(85, 85, 85, 0.900);
+  color: #1C2130;
+  background-color: #664448;
   border-radius: 20px;
 }
 
@@ -57,5 +70,19 @@ p {
   background: hsla(0, 0%, 0%, 0.700);
   font-weight: bold;
   padding: 20px;
-  margin-top: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_2k.jpg");
+
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .intro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_2k.jpg");
+
+  }
 }
