@@ -17,14 +17,18 @@
 
 ##############################################################################*/
 :root {
-  --bg-color: hsl(49 37% 94%);
+  --main-light-color: hsl(49 37% 94%);
   --hero-color: hsl(353, 20%, 33%);
   --font-color: hsl(220, 16%, 36%);
+  --bg-color: rgba(0,0,0,0.5);
+  --highlightSpeed: 6s;
+  --highlightCharacters: 24;
 }
 
 * {
   font-size: 15px;
   Font-Family: 'Roboto Slab', Serif;
+  color: var(--main-light-color);
 }
 
 /* ############################################################################
@@ -35,9 +39,9 @@
 
 .hero h1 {
   Font-Family: 'Ruda', Sans-Serif;
-  font-size: clamp(3rem, 3vw + 1rem, 5rem);
+  font-size: clamp(3rem, 3vw + 1rem, 7rem);
   margin-bottom: 0;
-  color: var(--bg-color);
+  color: var(--main-light-color);
 }
 
 .intro h2 {
@@ -53,78 +57,58 @@ p {
 }
 
 .hero-color {
+  background-color: rgba(0,0,0,0);
   color: var(--hero-color);
   font-weight: 900;
   font-size: clamp(1rem, 3vw + 1rem, 2rem);
+  padding: 0.5rem 1rem;
+  animation: fadebackground 3s ease 3s forwards;
+  border-radius: 15px;
 }
+
 /* ############################################################################
 
                               3. Layouts
 
 ##############################################################################*/
 
-html, body {
-    height: 100%;
-}
 
 body {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background: var(--bg-color);
+  margin: 0;
+  background: var(--main-light-color);
 }
 
 .content {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("../images/samuel-ferrara-unsplash_mobile.jpg");
   background-size: cover;
   height: 100vh;
+  text-align: center;
   box-shadow: 0px 4px 10px rgba(0,0,0,1);
-}
-
-.hero h1 {
-  padding: 3rem 0;
 }
 
 .portrait {
   margin: 3rem 0;
 }
 
-.arrow {
-  font-size: clamp(3rem, 3vw + 1rem, 5rem);
-  color: white;
-  background-color: red;
-  outline: 1px solid red;
-
-}
-
-.intro {
-  display: grid;
-  place-items: center;
-  color: var(--font-color);
-  padding-top: 1rem;
-}
-
 .icon-container {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    margin: 2rem 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  margin: 2rem 1rem;
 }
 
 .footer {
-  flex-shrink: 0;
   background: #4D576B;
   font-weight: bold;
   padding: 20px;
   box-shadow: 4px 0px 10px rgba(0,0,0,1);
-  color: #fff;
+  color: var(--main-light-color);
   margin-top: 1rem;
+  text-align: center;
 }
 
 /* ############################################################################
@@ -133,12 +117,16 @@ body {
 
 ##############################################################################*/
 
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadebackground {
+  from {background-color: rgba(0,0,0,0);}
+  to {background-color: rgba(0,0,0,0.5);}
 }
 
 .portrait {
@@ -168,19 +156,16 @@ body {
   box-shadow: 0px 4px 20px #664448;
 }
 
-.title-spacer {
-  display: grid;
-  place-items: center;
-  color: #4D576B;
-  font-size: 2rem;
-  padding: 2rem 0rem;
-}
-
 .fadeIn {
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeInUp 1s ease 1s forwards;
 }
+
+.fadeInDelay {
+  animation: fadeInUp 1s ease 2s forwards;
+}
+
 
 
 /* ############################################################################
